@@ -80,15 +80,22 @@ p {
     font-size: 1rem;
 }
 
-/* Arrange subscriber badges in a horizontal row that can wrap when needed. */
+/* Stack subscribers vertically, with each avatar beside its channel name. */
 .subscribers {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.65rem;
 }
 
 .subscriber {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.subscriber-avatar {
     display: grid;
+    flex: 0 0 42px;
     width: 42px;
     height: 42px;
     place-items: center;
