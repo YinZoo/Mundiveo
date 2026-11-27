@@ -80,11 +80,35 @@ p {
     font-size: 1rem;
 }
 
-/* Stack subscribers vertically, with each avatar beside its channel name. */
+/* Keep a vertical scrollbar visible for the subscriber list. */
 .subscribers {
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
+    max-height: 360px;
+    overflow-y: scroll;
+    padding-right: 0.5rem;
+    scrollbar-color: #b7c2d0 #f1f3f6;
+    scrollbar-width: thin;
+}
+
+.subscribers::-webkit-scrollbar {
+    width: 8px;
+}
+
+.subscribers::-webkit-scrollbar-track {
+    background: #f1f3f6;
+    border-radius: 999px;
+}
+
+.subscribers::-webkit-scrollbar-thumb {
+    background: #b7c2d0;
+    border: 3px solid #f1f3f6;
+    border-radius: 999px;
+}
+
+.subscribers::-webkit-scrollbar-thumb:hover {
+    background: #8794a5;
 }
 
 .subscriber {
